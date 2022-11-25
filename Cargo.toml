@@ -10,20 +10,25 @@ keywords = ["gamedev", "picking", "bevy", "raycast"]
 categories = ["game-engines", "rendering"]
 resolver = "2"
 
-[dependencies]
-bevy = { version = "0.9", default-features = false, features = ["render"] }
+[dependencies.bevy]
+path = "../bevy"
+default-features = false
+features = ["render"]
 
-bevy_mod_raycast = "0.7"
+[dependencies.bevy_mod_raycast]
+path = "../bevy_mod_raycast"
 
-[dev-dependencies]
-bevy = { version = "0.9", default-features = false, features = [
+[dev-dependencies.bevy]
+path = "../bevy"
+default-features = false
+features = [
     "bevy_pbr",
     "bevy_winit",
     "bevy_ui",
     "bevy_core_pipeline",
     "bevy_text",
     "x11",
-] }
+]
 
 [features]
 default = ["2d", "debug"]
